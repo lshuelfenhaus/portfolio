@@ -4,7 +4,7 @@ import LinkedInIcon from '@/app/images/linkedin.svg'
 
 export default function Footer() {
     return (
-        <Flex align="center" justify="space-evenly" paddingBottom={2}>
+        <Flex align="center" justify="space-evenly" as="footer" mt="auto" gap={2}>
             <Flex align="center" justify="space-evenly" gap={3}>
                <Icon as={GithubIcon} boxSize={6}/>
                 <Icon as={LinkedInIcon} boxSize={6}/> 

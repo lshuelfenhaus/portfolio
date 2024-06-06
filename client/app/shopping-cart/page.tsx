@@ -1,11 +1,10 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
-export default function Header() {
+export default function ShoppingCart() {
     return (
-        <Heading {...styles.header} as="h2">
-        Welcome to Liz's Web App Wonderland: Explore Our Creative Adventures!! 
-        </Heading>
-
+        <Flex align="center" direction="column" minH="100vh">
+        <Text {...styles.header}>Shopping Cart App!</Text>
+        </Flex>
     )
 }
 
@@ -20,4 +19,4 @@ const styles = {
         "fontWeight": "300",
         "color": "black"
     }
-}
+  }

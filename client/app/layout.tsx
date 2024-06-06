@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./fonts.css"
-import { Providers } from './providers'
+import { Providers } from '@/app/providers'
+import { Container } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-      <Providers>{children}</Providers>
+      <body className="container">
+          <Providers>
+          <Container maxW="100vw" maxH="100vh" overflow="hidden">
+            {children}
+          </Container>
+          </Providers>
       </body>
     </html>
   );

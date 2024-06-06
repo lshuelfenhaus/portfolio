@@ -1,21 +1,21 @@
-import { Box, Flex, IconButton, Text } from "@chakra-ui/react";
-import VideoIcon from '@/app/images/video.svg'
-import ShopIcon from '@/app/images/shopping.svg'
-import WeatherIcon from '@/app/images/weather.svg'
+import { Flex, Text } from "@chakra-ui/react";
+import WeatherButton from "../Buttons/WeatherButton";
+import VideoButton from "../Buttons/VideoButton";
+import ShoppingCartButton from "../Buttons/ShoppingCartButton";
 
 export default function Navbar() {
     return (
-        <Flex  as="nav" align="left" justify="space-evenly" padding={10}>
+        <Flex align="center" justify="space-evenly">
             <Flex direction="column" align="center">
-                 <IconButton icon={<VideoIcon />} boxSize={10} aria-label={"video-icon"}/>
-                <Text {...styles.text}>Video Conferance Room</Text>
+                <VideoButton/>
+                <Text {...styles.text}>Video Conference</Text>
             </Flex>
             <Flex direction="column" align="center">
-                <IconButton icon={<ShopIcon />} boxSize={10} aria-label={"shop-icon"}/>
+                <ShoppingCartButton />
                 <Text {...styles.text}>Shopping Cart</Text>
             </Flex> 
            <Flex direction="column" align="center">
-            <IconButton icon={<WeatherIcon />} boxSize={10} aria-label={"weather-icon"}/>
+                <WeatherButton/>
             <Text {...styles.text}>Local Weather</Text>
             </Flex>
         </Flex>
